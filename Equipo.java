@@ -45,7 +45,7 @@ public class Equipo
         numeracion++;
         // Crea el resto de jugadores, de forma aleatoria uno es capitan
         Random rand = new Random();
-        int indiceCapitan = rand.nextInt(numeroJugadores - 1) + 1;
+        int indiceCapitan = rand.nextInt(numeroJugadores - 1);
         for(int i = 0; i < (numeroJugadores -1); i++)
         {
             if(i == indiceCapitan)

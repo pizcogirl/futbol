@@ -32,10 +32,12 @@ public class Alineacion
         Random rand = new Random();
         if(rand.nextBoolean())
         {
+            System.out.println("Aleatorio");
             asignarTitularesAleatorio();
         }
         else
         {
+            System.out.println("Valoración");
             asignarTitularesValoracion();
         }
         // Los añade a las listas de titulares y suplentes
@@ -171,7 +173,7 @@ public class Alineacion
         for(int i = 0; i < titulares.size(); i++)
         {
             jugador = titulares.get(i);
-            if(!(jugador instanceof Capitan || jugador instanceof Portero) && jugador != null)
+            if(!(jugador instanceof Capitan || jugador instanceof Portero))
             {
                 jugador.suplente();
             }

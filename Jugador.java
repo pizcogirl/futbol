@@ -125,7 +125,7 @@ public abstract class Jugador implements Comparable<Jugador>
 
     // Metodo para comparar los jugadores en funcion de su valoracion
        public int compareTo(Jugador d){
-      int diferencia = this.valoracion() - d.valoracion();        
+      int diferencia = d.valoracion() - this.valoracion();        
       return diferencia;
    }
 }
