@@ -22,7 +22,7 @@ public class Partido
     {
         // initialise instance variables
         this.alineacionLocal = new Alineacion(local);
-        this.alineacionVisitante =new Alineacion(visitante);        
+        this.alineacionVisitante = new Alineacion(visitante);        
     }
     
     /**

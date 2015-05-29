@@ -17,6 +17,8 @@ public class Alineacion
     private ArrayList<Jugador> titulares;
     // Suplentes en esta alineacion
     private ArrayList<Jugador> suplentes;
+    // Numero de jugadores titulares
+    public static final int NUM_TITULARES = 11;
 
     /**
      * Crea un objeto alinieacion del equipo dado.
@@ -32,12 +34,10 @@ public class Alineacion
         Random rand = new Random();
         if(rand.nextBoolean())
         {
-            System.out.println("Aleatorio");
             asignarTitularesAleatorio();
         }
         else
         {
-            System.out.println("Valoración");
             asignarTitularesValoracion();
         }
         // Los añade a las listas de titulares y suplentes
@@ -86,7 +86,8 @@ public class Alineacion
         Collections.shuffle(temporal);
         Iterator<Jugador> it = temporal.iterator();
         // itera hasta cojer 9 más
-        while(indice < 9 && it.hasNext())
+        int num = (NUM_TITULARES - 2);
+        while(indice < num && it.hasNext())
         {  
             // Coge el jugador, lo pone como titular, lo elimina
             Jugador jugador = it.next();
@@ -113,7 +114,8 @@ public class Alineacion
         Collections.sort(temporal);
         Iterator<Jugador> it = temporal.iterator();
         // itera hasta cojer 9 más
-        while(indice < 9 && it.hasNext())
+        int num = (NUM_TITULARES - 2);
+        while(indice < num && it.hasNext())
         {  
             // Coge el jugador, lo pone como titular, lo elimina
             Jugador jugador = it.next();
